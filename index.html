@@ -12,22 +12,47 @@
 
 <body>
   <div class="container">
-    <div id="cars" class="row">
 
+    <div class="row">
+      <h1>Cars</h1>
     </div>
-  </div>
-  <form onsubmit="app.controllers.carController.addCar(event)">
-    <label for="make">Make</label>
-    <input type="text" name="make" placeholder="Make" required>
-    <label for="model">Model</label>
-    <input type="text" name="model" placeholder="Model" required>
-    <label for="year">Year</label>
-    <input type="number" name="year" placeholder="Year" required>
-    <label for="color">Color</label>
-    <input type="text" name="color" placeholder="Color" required>
-    <button type="submit" class="btn btn-success rounded-pill">Add Car</button>
-  </form>
 
+    <div id="cars" class="row">
+    </div>
+
+    <form onsubmit="app.controllers.carController.addCar(event)">
+      <label for="make">Make</label>
+      <input type="text" name="make" placeholder="Make" required>
+      <label for="model">Model</label>
+      <input type="text" name="model" placeholder="Model" required>
+      <label for="year">Year</label>
+      <input type="number" name="year" placeholder="Year" required>
+      <label for="color">Color</label>
+      <input type="text" name="color" placeholder="Color" required>
+      <button type="submit" class="btn btn-success rounded-pill">Add Car</button>
+    </form>
+
+    <div class="row">
+      <h1>Houses</h1>
+    </div>
+
+    <div id="houses" class="row">
+    </div>
+
+    <form onsubmit="app.controllers.houseController.addHouse(event)">
+      <label for="make">Make</label>
+      <input type="text" name="make" placeholder="Make" required>
+      <label for="model">Model</label>
+      <input type="text" name="model" placeholder="Model" required>
+      <label for="year">Year</label>
+      <input type="number" name="year" placeholder="Year" required>
+      <label for="color">Color</label>
+      <input type="text" name="color" placeholder="Color" required>
+      <button type="submit" class="btn btn-success rounded-pill">Add House</button>
+    </form>
+
+
+  </div>
   <script src="app/main.js" type="module"></script>
 </body>
 

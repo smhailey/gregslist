@@ -1,11 +1,12 @@
 import CarController from "./components/car/CarController.js";
+import HouseController from "./components/house/HouseController.js";
 
 
 class App {
   constructor() {
     this.controllers = {
-      carController: new CarController()
-
+      carController: new CarController(),
+      houseController: new HouseController()
     }
   }
 }
