@@ -9,10 +9,10 @@ export default class House {
   get Template() {
     return `
     <div class="col-4">
-        <h4>Make: ${this.make}</h4>
-        <h4>Model: ${this.model}</h4>
-        <h4>Year: ${this.year}</h4>
-        <p>Color: ${this.color}</p>
+        <h5>Make: ${this.make}</h5>
+        <h5>Model: ${this.model}</h5>
+        <h5>Year: ${this.year}</h5>
+        <h6>Color: ${this.color}</h6>
       </div>
     `
   }

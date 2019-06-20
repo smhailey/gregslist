@@ -13,12 +13,15 @@
 <body>
   <div class="container">
 
-    <div class="row">
-      <h1>Cars</h1>
+    <div class="row nav justify-content-center text-primary">
+      <h1>Greg's List</h1>
     </div>
 
-    <div id="cars" class="row">
+    <div class="row nav justify-content-center text-info">
+      <h2>Cars</h2>
     </div>
+
+    <div id="cars" class="row"></div>
 
     <form onsubmit="app.controllers.carController.addCar(event)">
       <label for="make">Make</label>
@@ -32,12 +35,11 @@
       <button type="submit" class="btn btn-success rounded-pill">Add Car</button>
     </form>
 
-    <div class="row">
-      <h1>Houses</h1>
+    <div class="row nav justify-content-center text-info">
+      <h2>Houses</h2>
     </div>
 
-    <div id="houses" class="row">
-    </div>
+    <div id="houses" class="row"></div>
 
     <form onsubmit="app.controllers.houseController.addHouse(event)">
       <label for="make">Make</label>
@@ -51,6 +53,23 @@
       <button type="submit" class="btn btn-success rounded-pill">Add House</button>
     </form>
 
+    <div class="row nav justify-content-center text-info">
+      <h2>Jobs</h2>
+    </div>
+
+    <div id="jobs" class="row"></div>
+
+    <form onsubmit="app.controllers.jobController.addJob(event)">
+      <label for="title">Title</label>
+      <input type="text" name="title" placeholder="Title" required>
+      <label for="description">Description</label>
+      <input type="text" name="description" placeholder="Description" required>
+      <label for="pay">Pay</label>
+      <input type="number" name="pay" placeholder="Pay" required>
+      <label for="location">Location</label>
+      <input type="text" name="location" placeholder="Location" required>
+      <button type="submit" class="btn btn-success rounded-pill">Add Job</button>
+    </form>
 
   </div>
   <script src="app/main.js" type="module"></script>
