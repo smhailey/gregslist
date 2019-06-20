@@ -24,7 +24,7 @@ export default class JobController {
     let form = e.target
 
     let newJob = {
-      title: form.title.value,
+      jobTitle: form.jobTitle.value,
       description: form.description.value,
       pay: form.pay.value,
       location: form.location.value
