@@ -71,6 +71,24 @@
       <button type="submit" class="btn btn-success rounded-pill">Add Job</button>
     </form>
 
+    <div class="row nav justify-content-center text-info">
+      <h2>Musical Equipment</h2>
+    </div>
+
+    <div id="musicEquips" class="row"></div>
+
+    <form onsubmit="app.controllers.musicEquipController.addMusicEquip(event)">
+      <label for="instrumentName">Instrument Name</label>
+      <input type="text" name="instrumentName" placeholder="Instrument Name" required>
+      <label for="maker">Maker</label>
+      <input type="text" name="maker" placeholder="Maker" required>
+      <label for="year">Year</label>
+      <input type="number" name="year" placeholder="Year" required>
+      <label for="price">Price</label>
+      <input type="number" name="price" placeholder="Price" required>
+      <button type="submit" class="btn btn-success rounded-pill">Add Instrument</button>
+    </form>
+
   </div>
   <script src="app/main.js" type="module"></script>
 </body>

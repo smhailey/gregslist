@@ -1,6 +1,7 @@
 import CarController from "./components/car/CarController.js";
 import HouseController from "./components/house/HouseController.js";
 import JobController from "./components/job/JobController.js";
+import MusicEquipController from "./components/musicEquip/MusicEquipController.js";
 
 
 class App {
@@ -8,7 +9,8 @@ class App {
     this.controllers = {
       carController: new CarController(),
       houseController: new HouseController(),
-      jobController: new JobController()
+      jobController: new JobController(),
+      musicEquipController: new MusicEquipController()
     }
   }
 }
