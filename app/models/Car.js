@@ -12,18 +12,18 @@ export default class Car {
   get Template() {
     return `
     <div class="col-4">
-      <div class="card m-1">
+      <div class="card text-white bg-dark m-1">
         <img src="${this.imgUrl}" alt="Car photo" class="car-img-top" style="width:100%">
         <div class="card-body">
           <h4>Make: ${this.make}</h4>
           <h4>Model: ${this.model}</h4>
           <h4>Year: ${this.year}</h4>
           <p>Price: ${this.price.toFixed(0)}</p>
-          <p contenteditable="true">${this.description}</p>
+          <p contenteditable="true" class="text-truncate">${this.description}</p>
         </div>
         <div class="card-footer">
-          <button onclick="app.controllers.carController.placeBid('${this._id}')" class="btn btn-success">Place Bid</button>
-          <button onclick="app.controllers.carController.purchase('${this._id}')" class="btn btn-primary">Buy Car</button>
+          <button onclick="app.controllers.carController.placeBid('${this._id}')" class="btn btn-primary rounded-pill" style="width:100%">Place Bid</button>
+          <button onclick="app.controllers.carController.purchase('${this._id}')" class="btn btn-danger rounded-pill" style="width:100%">Buy Car</button>
         </div>
       </div>
     </div>
