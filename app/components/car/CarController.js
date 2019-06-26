@@ -6,14 +6,17 @@ function drawCars() {
   let carsElem = document.querySelector("#cars")
   let template = ''
   let cars = _carService.Cars
-  cars.forEach(car => { template += car.Template })
+  cars.forEach(car => {
+    template += car.Template
+  })
   carsElem.innerHTML = template
 }
 
 export default class CarController {
   constructor() {
     console.log("Car Controller works")
-    drawCars()
+    _carService.addSubscriber("cars", drawCars)
+    _carService.getCars()
   }
 
   addCar(e) {
@@ -24,7 +27,9 @@ export default class CarController {
       make: form.make.value,
       model: form.model.value,
       year: form.year.value,
-      color: form.color.value
+      price: form.price.value,
+      description: form.description.value,
+      imgUrl: form.imgUrl.value
     }
 
     _carService.addCar(newCar)
@@ -32,4 +37,11 @@ export default class CarController {
     drawCars()
   }
 
+  placeBid(carId) {
+    _carService.placeBid(carId)
+  }
+
+  purchase(carId) {
+    _carService.purchase(carId)
+  }
 }

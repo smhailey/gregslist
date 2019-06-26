@@ -24,8 +24,6 @@
       <h2>Cars</h2>
     </div>
 
-    <div id="cars" class="row"></div>
-
     <form onsubmit="app.controllers.carController.addCar(event)">
       <label for="make">Make</label>
       <input type="text" name="make" placeholder="Make" required>
@@ -33,18 +31,22 @@
       <input type="text" name="model" placeholder="Model" required>
       <label for="year">Year</label>
       <input type="number" name="year" placeholder="Year" required>
-      <label for="color">Color</label>
-      <input type="text" name="color" placeholder="Color" required>
+      <label for="price">Price</label>
+      <input type="number" name="price" placeholder="Price" required>
+      <label for="imgUrl">Image</label>
+      <input type="text" name="imgUrl" placeholder="Image" required>
+      <label for="description">Description</label>
+      <textarea name="description" cols="30" rows="1"></textarea>
       <button type="submit" class="btn btn-success rounded-pill">Add Car</button>
     </form>
+
+    <div id="cars" class="row"></div>
 
     <hr class="line">
 
     <div class="row nav justify-content-center text-info">
       <h2>Houses</h2>
     </div>
-
-    <div id="houses" class="row"></div>
 
     <form onsubmit="app.controllers.houseController.addHouse(event)">
       <label for="make">Make</label>
@@ -58,13 +60,13 @@
       <button type="submit" class="btn btn-success rounded-pill">Add House</button>
     </form>
 
+    <div id="houses" class="row"></div>
+
     <hr class="line">
 
     <div class="row nav justify-content-center text-info">
       <h2>Jobs</h2>
     </div>
-
-    <div id="jobs" class="row"></div>
 
     <form onsubmit="app.controllers.jobController.addJob(event)">
       <label for="jobTitle">Job Title</label>
@@ -78,13 +80,13 @@
       <button type="submit" class="btn btn-success rounded-pill">Add Job</button>
     </form>
 
+    <div id="jobs" class="row"></div>
+
     <hr class="line">
 
     <div class="row nav justify-content-center text-info">
       <h2>Musical Equipment</h2>
     </div>
-
-    <div id="musicEquips" class="row"></div>
 
     <form onsubmit="app.controllers.musicEquipController.addMusicEquip(event)">
       <label for="instrumentName">Instrument Name</label>
@@ -98,9 +100,12 @@
       <button type="submit" class="btn btn-success rounded-pill">Add Instrument</button>
     </form>
 
+    <div id="musicEquips" class="row"></div>
+
     <hr class="line">
 
   </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="app/main.js" type="module"></script>
 </body>
 

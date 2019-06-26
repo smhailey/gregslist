@@ -3,7 +3,6 @@ import HouseController from "./components/house/HouseController.js";
 import JobController from "./components/job/JobController.js";
 import MusicEquipController from "./components/musicEquip/MusicEquipController.js";
 
-
 class App {
   constructor() {
     this.controllers = {
