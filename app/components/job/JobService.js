@@ -53,6 +53,7 @@ export default class JobService {
     _jobApi.get('')
       .then(res => {
         let serverJobs = res.data.data
+        console.log(res.data.data)
         let jobs = serverJobs.map(j => new Job(j)).reverse()
         setState('jobs', jobs)
       })
