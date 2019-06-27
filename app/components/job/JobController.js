@@ -16,7 +16,7 @@ export default class JobController {
   constructor() {
     console.log("Job Controller works")
     _jobService.addSubscriber("jobs", drawJobs)
-    drawJobs()
+    _jobService.getJobs()
   }
 
   addJob(e) {
@@ -24,13 +24,24 @@ export default class JobController {
     let form = e.target
 
     let newJob = {
+      company: form.company.value,
       jobTitle: form.jobTitle.value,
+      hours: form.hours.value,
+      rate: form.rate.value,
       description: form.description.value,
-      pay: form.pay.value,
-      location: form.location.value
+      imgUrl: form.imgUrl.value
     }
 
     _jobService.addJob(newJob)
     form.reset()
+    drawJobs()
+  }
+
+  apply(jobId) {
+    _jobService.apply(jobId)
+  }
+
+  takeJob(jobId) {
+    _jobService.takeJob(jobId)
   }
 }

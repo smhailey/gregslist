@@ -75,14 +75,16 @@
     </div>
 
     <form onsubmit="app.controllers.jobController.addJob(event)">
+      <label for="company">Company</label>
+      <input type="text" name="company" placeholder="Company" required>
       <label for="jobTitle">Job Title</label>
       <input type="text" name="jobTitle" placeholder="Job Title" required>
+      <label for="hours">Hours</label>
+      <input type="number" name="hours" placeholder="Hours" required>
+      <label for="rate">Rate</label>
+      <input type="number" name="rate" placeholder="Rate" required>
       <label for="description">Description</label>
       <input type="text" name="description" placeholder="Description" required>
-      <label for="pay">Pay</label>
-      <input type="text" name="pay" placeholder="Pay" required>
-      <label for="location">Location</label>
-      <input type="text" name="location" placeholder="Location" required>
       <button type="submit" class="btn btn-success rounded-pill">Add Job</button>
     </form>
 
