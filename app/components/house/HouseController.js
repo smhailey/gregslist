@@ -1,6 +1,5 @@
 import HouseService from "./HouseService.js";
 
-
 let _houseService = new HouseService()
 
 function drawHouses() {
@@ -16,7 +15,8 @@ function drawHouses() {
 export default class HouseController {
   constructor() {
     console.log("House Controller works")
-    drawHouses()
+    _houseService.addSubscriber("houses", drawHouses)
+    _houseService.getHouses()
   }
 
   addHouse(e) {
@@ -24,14 +24,25 @@ export default class HouseController {
     let form = e.target
 
     let newHouse = {
-      make: form.make.value,
-      model: form.model.value,
+      bedrooms: form.bedrooms.value,
+      bathrooms: form.bathrooms.value,
+      levels: form.levels.value,
+      imgUrl: form.imgUrl.value,
       year: form.year.value,
-      color: form.color.value
+      price: form.price.value,
+      description: form.description.value
     }
 
     _houseService.addHouse(newHouse)
     form.reset()
     drawHouses()
+  }
+
+  placeBid(houseId) {
+    _houseService.placeBid(houseId)
+  }
+
+  purchase(houseId) {
+    _houseService.purchase(houseId)
   }
 }

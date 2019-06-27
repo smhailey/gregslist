@@ -19,7 +19,7 @@ export default class Car {
           <h4>Model: ${this.model}</h4>
           <h4>Year: ${this.year}</h4>
           <p>Price: ${this.price.toFixed(0)}</p>
-          <p contenteditable="true" class="text-truncate">${this.description}</p>
+          <p contenteditable="true">${this.description}</p>
         </div>
         <div class="card-footer">
           <button onclick="app.controllers.carController.placeBid('${this._id}')" class="btn btn-primary rounded-pill" style="width:100%">Place Bid</button>

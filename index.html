@@ -49,14 +49,20 @@
     </div>
 
     <form onsubmit="app.controllers.houseController.addHouse(event)">
-      <label for="make">Make</label>
-      <input type="text" name="make" placeholder="Make" required>
-      <label for="model">Model</label>
-      <input type="text" name="model" placeholder="Model" required>
+      <label for="bedrooms">Bedrooms</label>
+      <input type="number" name="bedrooms" placeholder="Bedrooms" required>
+      <label for="bathrooms">Bathrooms</label>
+      <input type="number" name="bathrooms" placeholder="Bathrooms" required>
+      <label for="levels">Levels</label>
+      <input type="number" name="levels" placeholder="Levels" required>
+      <label for="imgUrl">Image</label>
+      <input type="text" name="imgUrl" placeholder="Image" required>
       <label for="year">Year</label>
       <input type="number" name="year" placeholder="Year" required>
-      <label for="color">Color</label>
-      <input type="text" name="color" placeholder="Color" required>
+      <label for="price">Price</label>
+      <input type="number" name="price" placeholder="Price" required>
+      <label for="description">Description</label>
+      <textarea name="description" cols="30" rows="1"></textarea>
       <button type="submit" class="btn btn-success rounded-pill">Add House</button>
     </form>
 
